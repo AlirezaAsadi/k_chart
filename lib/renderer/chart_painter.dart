@@ -75,7 +75,7 @@ class ChartPainter extends BaseChartPainter {
 
   @override
   void initChartRenderer() {
-    if (datas != null && datas!.isNotEmpty) {
+    if (datas != null && datas!.isNotEmpty && fixedLength <= 2) {
       var t = datas![0];
       fixedLength =
           NumberUtil.getMaxDecimalLength(t.open, t.close, t.high, t.low);
